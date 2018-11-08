@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+        <h4 align="left">
+          <strong>{{ post.date | date_to_string }}</strong>
+          <a href="{{post.url}}">
+            <strong>{{ post.title }}</strong>
+          </a>
+        </h4>
+    </li>
+  {% endfor %}
+</ul>
